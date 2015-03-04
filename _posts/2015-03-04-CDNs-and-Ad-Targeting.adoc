@@ -1,4 +1,5 @@
 = CDNs and Ad Targeting
+:hp-tags: clojure, ads, fast, cloudfront, CDN, Custom-Origin
 
 We have a system which we've been using to "inject" ad tags via JSONP into web pages.  The basic concept is that for each URL we categorize it in an offline process, and in real-time the JS on the page asks for the tagging info.  
 
