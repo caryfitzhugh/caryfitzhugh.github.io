@@ -1,10 +1,1 @@
-{
-  "meta": {
-    "username": "caryfitzhugh",
-    "repositoryName": "caryfitzhugh.github.io",
-    "branch": "master"
-  },
-  "theme": {
-    "name": "uno"
-  }
-}
+{"meta":{"username":"caryfitzhugh","repositoryName":"caryfitzhugh.github.io","branch":"master"},"site":{"title":"Cary.FitzHugh","url":"https://caryfitzhugh.github.io"},"socialnetwork":{"github":"caryfitzhugh"},"theme":{"name":"uno","url":"https://caryfitzhugh.github.io/themes/uno"}}
