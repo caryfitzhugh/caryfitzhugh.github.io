@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>CDNs and Ad Targeting - Cary.FitzHugh</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="CDNs and Ad Targeting">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="CDNs and Ad Targeting">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="https://caryfitzhugh.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+
+    <link rel="canonical" href="https://caryfitzhugh.github.io/2015/03/04/CDNs-and-Ad-Targeting.html" />
+    
+    <meta property="og:site_name" content="Cary.FitzHugh" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="CDNs and Ad Targeting" />
+    <meta property="og:description" content="We have a system which we&amp;#8217;ve been using to &quot;inject&quot; ad tags via JSONP into web pages.  The basic concept is that for each URL we categorize it in an offline process, and in real-time the JS on..." />
+    <meta property="og:url" content="https://caryfitzhugh.github.io/2015/03/04/CDNs-and-Ad-Targeting.html" />
+    <meta property="article:published_time" content="2015-03-04T05:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-03-04T15:31:26.570Z" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="CDNs and Ad Targeting" />
+    <meta name="twitter:description" content="We have a system which we&amp;#8217;ve been using to &quot;inject&quot; ad tags via JSONP into web pages.  The basic concept is that for each URL we categorize it in an offline process, and in real-time the JS on..." />
+    <meta name="twitter:url" content="https://caryfitzhugh.github.io/2015/03/04/CDNs-and-Ad-Targeting.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Cary.FitzHugh",
+    "author": {
+        "@type": "Person",
+        "name": "Cary FitzHugh",
+        "image": "https://avatars.githubusercontent.com/u/445848?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": ""
+    },
+    "headline": "CDNs and Ad Targeting",
+    "url": "https://caryfitzhugh.github.io/2015/03/04/CDNs-and-Ad-Targeting.html",
+    "datePublished": "2015-03-04T05:00:00.000Z",
+    "dateModified": "2015-03-04T15:31:26.570Z",
+    "description": "We have a system which we&amp;#8217;ve been using to &quot;inject&quot; ad tags via JSONP into web pages.  The basic concept is that for each URL we categorize it in an offline process, and in real-time the JS on..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Cary.FitzHugh" href="https://caryfitzhugh.github.io/rss" />
+
+</head>
+<body class="post-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="https://caryfitzhugh.github.io" title="link to homepage for Cary.FitzHugh">Cary.FitzHugh</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">A place for things to say.</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="https://caryfitzhugh.github.io/#blog" title="link to Cary.FitzHugh blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+              
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="caryfitzhugh" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+              
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="04 Mar 2015" class="post-meta__date date">04 Mar 2015</time> &#8226; <span class="post-meta__tags tags"></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/445848?v=3" alt="profile image for Cary FitzHugh" class="avatar post-meta__avatar" /> by Cary FitzHugh</span>
+      </div>
+      <h1 class="post-title">CDNs and Ad Targeting</h1>
+    </header>
+
+    <section class="post">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>We have a system which we&#8217;ve been using to "inject" ad tags via JSONP into web pages.  The basic concept is that for each URL we categorize it in an offline process, and in real-time the JS on the page asks for the tagging info.</p>
+</div>
+<div class="paragraph">
+<p>The thing this requires is really fast responses.  We are directly in the rendering path for all the ads and page content.  Previously we had a load-balanced set of servers, running with RAM caches in front and with DynamoDB behind.  This worked pretty well, and internal latencies were around 10ms or so.</p>
+</div>
+<div class="paragraph">
+<p>But we may be able to do better.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cloudfront">Cloudfront</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In looking at the problem we realized that the JSONP requests are really just small (&lt; 100b) javascript assets.  Could we use a CDN to serve these?  It turns out that is exactly what we can do.  Using Cloudfront&#8217;s "Custom-Origin" feature we can basically put a CDN cache in front of our servers.</p>
+</div>
+<div class="paragraph">
+<p>This is great in so many ways.  First - a CDN is much faster than we are.  A cache hit on a CDN is going to be found and returned to the client much quicker than we could return it.  Second - it makes our code much simpler (no more caching layer). And Third - it means our HW costs are much lower.  Serving 1000 req/s from a CDN is much cheaper than having to bring up servers that can do that (and do it within the time constraints).</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_tricks">Tricks</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The one trick we had to implement was customizing the TTL for each of the CDN&#8217;s assets.  When you ask for some tags, we may not have them calculated yet.  Off a request goes to the backend to do the work.  And we immediately return [] to the browser (client).  By default we cache things in the CDN for 24 hours.  But we don&#8217;t want to cache a [] response for longer than we need to.  A few minutes should guarantee that we&#8217;ll have completed the categorization and pushed an answer into dynamoDB.  So - we simply set a max-age=120 in the response from our server.</p>
+</div>
+<div class="paragraph">
+<p>In here we do a little bit of twiddling to remap categories if required. And then calculate the shelf-life of this response.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-clojure" data-lang="clojure">(defn index
+  "This is the basic entry point for the categorization via script tag."
+  [req &amp; args]
+  (with-required-parameters req [url]
+    (let [categorization (dcat/fetch url)
+          mapping         (get front-end-mappings (-&gt; req :params :mapping))
+          categories (dcat/calculate-active
+                       (if mapping
+                         (clojure.set/rename-keys categorization mapping)
+                         categorization))
+          shelf-life (if categorization
+                       ;; found good data? expire in 24 hours
+                       (* 60 60 24)
+                       ;; nothing yet? expire in 2 mins
+                       (* 60 2))
+          body (if-let [jsonp (-&gt; req :params :jsonp)]
+                           (str jsonp "(" (json/write-str categories) ")")
+                           (json/write-str categories))
+         ]
+    (-&gt; (r/response body)
+        (r/header "Content-Type" "application/json; charset=utf-8")
+        (r/header "Cache-Control" (str "max-age=" shelf-life ", public"))
+        ))))</code></pre>
+</div>
+</div>
+</div>
+</div>
+    </section>
+
+  </article>
+
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2015. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script>
+
+    <script type="text/javascript" src="https://caryfitzhugh.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+
+</body>
+</html>
