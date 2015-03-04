@@ -1,0 +1,47 @@
+= CDNs and Ad Targeting
+
+We have a system which we've been using to "inject" ad tags via JSONP into web pages.  The basic concept is that for each URL we categorize it in an offline process, and in real-time the JS on the page asks for the tagging info.  
+
+The thing this requires is really fast responses.  We are directly in the rendering path for all the ads and page content.  Previously we had a load-balanced set of servers, running with RAM caches in front and with DynamoDB behind.  This worked pretty well, and internal latencies were around 10ms or so.
+
+But we may be able to do better.
+
+== Cloudfront
+
+In looking at the problem we realized that the JSONP requests are really just small (< 100b) javascript assets.  Could we use a CDN to serve these?  It turns out that is exactly what we can do.  Using Cloudfront's "Custom-Origin" feature we can basically put a CDN cache in front of our servers.
+
+This is great in so many ways.  First - a CDN is much faster than we are.  A cache hit on a CDN is going to be found and returned to the client much quicker than we could return it.  Second - it makes our code much simpler (no more caching layer). And Third - it means our HW costs are much lower.  Serving 1000 req/s from a CDN is much cheaper than having to bring up servers that can do that (and do it within the time constraints).
+
+== Tricks
+
+The one trick we had to implement was customizing the TTL for each of the CDN's assets.  When you ask for some tags, we may not have them calculated yet.  Off a request goes to the backend to do the work.  And we immediately return [] to the browser (client).  By default we cache things in the CDN for 24 hours.  But we don't want to cache a [] response for longer than we need to.  A few minutes should guarantee that we'll have completed the categorization and pushed an answer into dynamoDB.  So - we simply set a max-age=120 in the response from our server.
+
+In here we do a little bit of twiddling to remap categories if required. And then calculate the shelf-life of this response.
+
+[source,clojure]
+(defn index
+  "This is the basic entry point for the categorization via script tag."
+  [req & args]
+  (with-required-parameters req [url]
+    (let [categorization (dcat/fetch url)
+          mapping         (get front-end-mappings (-> req :params :mapping))
+          categories (dcat/calculate-active
+                       (if mapping                                                                                                                                                                        
+                         (clojure.set/rename-keys categorization mapping)
+                         categorization))
+          shelf-life (if categorization
+                       ;; found good data? expire in 24 hours
+                       (* 60 60 24) 
+                       ;; nothing yet? expire in 2 mins
+                       (* 60 2)) 
+          body (if-let [jsonp (-> req :params :jsonp)]
+                           (str jsonp "(" (json/write-str categories) ")")
+                           (json/write-str categories))
+         ] 
+    (-> (r/response body)
+        (r/header "Content-Type" "application/json; charset=utf-8")
+        (r/header "Cache-Control" (str "max-age=" shelf-life ", public"))
+        ))))
+        
+        
+        
