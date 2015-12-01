@@ -1,0 +1,42 @@
+Koder
+======
+
+The idea is to get a sandbox development environment for my son.  To play and fiddle and not break anything.  No internetz or mice either. Interested in giving him the ability to dig deep, not shallow.  I'll be around to help him as best I can.
+
+The current idea is to provide the following in a nice box:
+
+* *BeagleBone Black*
+** This is his development machine.  Linux. Sweet.
+* *Plastic Case*
+* *Powered USB Hub*
+** This may be able to run the BBB (I hope so). We'll see. If not, we need it anyway.
+* *USB Flash Drive*
+** A place to run code / a working scratch directory
+* *MicroUSB Adapter*
+* *MicroHDMI Adapter*
+* *USB Keyboard*
+
+The monitor is just an HDMI TV. I already have a cable for that. So no worries there.  
+
+Just ordered all the parts. I hope to put them together in a nice packaged foam-cutout box so things stay neat.
+
+Once that arrives I can start working on the system.
+
+Current Plan
+------------
+
+The current plan is that he should be able to just plug it in and be handed a login prompt on the TV.  Type in his username / password, and he'll be dropped into the shell.  Bash probably.
+
+I think there is a lot of fun to discover in the shell by itself. Learn to make directories, organize folders, _echo_, _cat_, etc. So many things.  Maybe they aren't interesting enough. We shall see. I sortof think if this nerdy stuff isn't interesting, don't worry. If you're meant to be a software engineer who loves their job, you'll find it interesting eventually.  Or not - and that's fine too. Don't be stuck doing something you don't enjoy (if you can help it).
+
+Once the system is up and running. I am going to buy a Rasp Pi Zero with a link:https://www.raspberrypi.org/blog/buy-the-sense-hat-as-seen-in-space/[Sense HAT], small case, solder on the 20pin header, microSD card and link:https://www.adafruit.com/products/830[4AA battery pack w/ switch].
+
+This is the core idea here, that the BBB gives him the ability to develop with Python ):, scheme (: , or... lua? javascript? bash script?   It will probably be Python. But - regardless, he does it on the BBB, and flashes / writes that to the Pi Zero.
+
+There need to be a set of scripts so flashing to the Pi Zero is as simple as running a single script.  Then the PiZero can be carried around and used.  Other HATs will follow
+
+I think there is a lot he can do and learn. And when HATs and things are so cheap, I can probably just buy him a set of 10 servos and a servo controller for $35.  That's nutty how cheap it is.
+
+I'll have to look around for a python intro book.  Or scheme. I like scheme. But don't think it'll play nicely with many of the libraries already written... Why Python...  I don't like your 'semantically important whitespace'!
+
+More to come once I get things put together. Woot.
