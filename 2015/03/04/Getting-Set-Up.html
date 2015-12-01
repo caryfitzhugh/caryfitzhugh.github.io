@@ -25,7 +25,7 @@
     <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
 
-    <link rel="stylesheet" type="text/css" href="https://caryfitzhugh.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+    <link rel="stylesheet" type="text/css" href="//caryfitzhugh.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
 
     <link rel="canonical" href="https://caryfitzhugh.github.io/2015/03/04/Getting-Set-Up.html" />
     
@@ -35,7 +35,7 @@
     <meta property="og:description" content="Should be a fun journey. I&amp;#8217;ll try to mention what I&amp;#8217;m thinking about / working on from time to time.  Maybe the google-sifter can pull things out for you if you need some of these tidbits in..." />
     <meta property="og:url" content="https://caryfitzhugh.github.io/2015/03/04/Getting-Set-Up.html" />
     <meta property="article:published_time" content="2015-03-04T05:00:00.000Z" />
-    <meta property="article:modified_time" content="2015-03-04T15:14:18.893Z" />
+    <meta property="article:modified_time" content="2015-12-01T20:54:48.137Z" />
     
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Getting Set Up" />
@@ -52,18 +52,19 @@
         "name": "Cary FitzHugh",
         "image": "https://avatars.githubusercontent.com/u/445848?v=3",
         "url": "undefined/author/undefined",
-        "sameAs": ""
+        "sameAs": null
     },
     "headline": "Getting Set Up",
     "url": "https://caryfitzhugh.github.io/2015/03/04/Getting-Set-Up.html",
     "datePublished": "2015-03-04T05:00:00.000Z",
-    "dateModified": "2015-03-04T15:14:18.893Z",
+    "dateModified": "2015-12-01T20:54:48.137Z",
     "description": "Should be a fun journey. I&amp;#8217;ll try to mention what I&amp;#8217;m thinking about / working on from time to time.  Maybe the google-sifter can pull things out for you if you need some of these tidbits in..."
 }
     </script>
 
     <meta name="generator" content="Ghost ?" />
     <link rel="alternate" type="application/rss+xml" title="Cary.FitzHugh" href="https://caryfitzhugh.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
 
 </head>
 <body class="post-template no-js">
@@ -102,7 +103,7 @@
               
                   <!-- Github -->
                   <li class="navigation__item">
-                    <a href="caryfitzhugh" title="Github account">
+                    <a href="https://github.com/caryfitzhugh" title="Github account">
                       <i class='icon icon-social-github'></i>
                       <span class="label">Github</span>
                     </a>
@@ -161,9 +162,20 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
 
-    <script type="text/javascript" src="https://caryfitzhugh.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//caryfitzhugh.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
     
 
 </body>
