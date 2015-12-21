@@ -1,0 +1,39 @@
+# Koder Pt 1	
+
+Well - back at it. It has been a few weeks.  The idea has morphed a bit for some various reasons. 
+
+First - I could not find a raspberry Pi Zero for sale. All sold out. So - that part will have to come in the future.  For now - it will just be a keyboard-only development linux box that runs against the TV.
+
+Funny note - I just now opened up the small USB keyboard I got off amazon, and the "d" key is actually an "e".  Which is quite weird, but I can fix it with some markers.  
+
+So the first step in my journey is to burn a bootable image onto the microSD card.
+
+My first stop is google.  Though I have some low-level linux / HW experience, I don't know enough off the top of my head to do this without instruction!  I started here:
+(https://learn.adafruit.com/beaglebone-black-installing-operating-systems/mac-os-x)
+
+Which led me to realize that isn't a great place to start.
+
+* First you need an image: http://beagleboard.org/latest-images
+** I picked the latest 8.2 debian build.
+* Next you need to be able to unpack it - so I need 7zip
+
+    brew install p7zip
+
+* The file I downloaded
+
+  bone-debian-8.2-tester-2gb-armhf-2015-11-12-2gb.img.xz
+  
+* Now I'm unzipping it
+
+   7z x bone-debian-8.2-tester-2gb-armhf-2015-11-12-2gb.img.xz
+   
+* Thanks for the good work Igor Pavlov! 7zip unzipped it and now I have a plain old file.
+
+I had wanted to use dd to copy the image, but - it's almost Christmas, and I need to get this done. PiFiller to the rescue (http://ivanx.com/raspberrypi/)
+
+That was not too painful, and now I have a microSD card with the correct image on it!
+
+Since the BBB is in the other part of the house, and I'm cozy in bed, I'll plug it in later to try it out.
+
+On to figuring out which version of scheme I'll be setting him up with - and to Vim from the start... or not? :)
+  
