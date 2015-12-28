@@ -1,0 +1,185 @@
+# Koder Project #1
+
+The Christmas present was delivered, on time, but with limited functionality.  I went with agile, and chose 2.  He was thrilled despite my incomplete present.
+
+I set him up with Vim, and he learned a few shell commands.
+
+* cd
+* ls
+* vim _xxx_
+
+Inside Vim I was able to teach him
+
+* I - for insert mode
+* Esc to leave insert mode
+* :w to write the file
+* :q to quit
+
+Using this small set of commands, he proceeded to "write himself a diary".  I think that is a really good first step for kids. So I'd suggest this:
+
+## Project 1
+### Write A Diary Entry
+
+#### Objective: 
+  To write a diary entry and create a directory for diary entries.  Make sure that the entries can be added one at a time, their titles looked at, and removed entry by entry.  
+  
+The way we'll do this is to log into your machine.
+
+Look at the files in your current directory
+
+  ls
+  
+Look for a directory which is called "Diary" - you probably don't see one. If you do - you probably already did this project!
+
+We want to create a "directory" or a "folder" to collect and keep all your diary entries. The entries you'll make as you write down all the things you learn :)
+
+So - you first need to figure out a name for the directory.  Think of it like - what do you want to name your Diary? 
+
+My son's name is Kaeden, so we'll name it
+
+  kaedens-diary
+
+Notice there aren't any spaces in that name!  You don't want spaces in file or directory names.  They are just a pain.  If I told you to open a file like this:
+
+  open a really bad file
+  
+How could you know if it was called
+
+* a really bad file
+* Or two files:
+** a really bad  
+** file
+* Or these two:
+** a really
+** bad file
+* Maybe these two?
+** a
+** really bad file
+* Maybe 3 files?!?
+** a really
+** bad
+** file
+* ..... And on and on.
+
+As you can probably guess by now - there are many many ways to misunderstand someone when they are typing and you allow file names to have spaces.  If you can't figure it out - your dumb computer will definitely never be able to figure it out.  There *are* some ways to sortof force the computer to use spaces, but _don't do it_.  The computer works best without spaces.  Be nice.
+
+So - let's say your name is ... "Aragorn".  You could name your diary directory 
+
+  aragorns-diary
+  
+Also - no capitalz.  They just make things harder and ... believe me.  You'll think capitals are cool until you can't remember if you called the file "USA-photos", "UsaPhotos", "USA-Photos"...  Just don't do it.
+
+#### Create the directory
+
+   cd aragorns-diary
+   
+This creates the directory. An empty directory.  
+
+#### Check
+
+  ls 
+
+Look at the files, and you should see the diary there! Yay!
+
+#### Enter that directory
+
+You are "in" a directory right now. It is your home directory.  You'll want to move down from where you are and entry the diary directory.  
+
+  cd aragorns-diary
+  
+#### Now look around
+
+If you do an 
+
+  ls 
+  
+now, you'll see nothing.  That's because you are now "inside" the diary directory. And it is empty.  If you want to go "up" (which takes you back home) - you can use ".."  That is a special filename meaning "the directory above this one".
+
+  cd ..
+
+That takes you up.
+
+  cd  aragorns-directory
+  
+That takes you back in.
+
+If you get *really* lost, and are "cd"'ing all over the computer like a dungeon explorer, you can always "go home" with a plain old "cd".
+
+#### Creating an Entry
+
+From wherever you are - go to the diary directory. You might need to cd, then cd into your diary directory. However you get there. Get there.
+
+Now you will learn how to edit a file.
+
+Decide what you want to name the entry.  every file already has a timestamp (when it was modified) - so you don't need to put the date in the name. Maybe pick a topic to write about. Like 
+
+  my-christmas
+  
+Remember! No capitals, no spaces. Perfect!
+
+You want to open that file with Vim.
+
+  vim my-christmas
+
+You are now in the worlds best editor™
+
+To keep it simple.  To add words and change things you need to be in *--INSERT--* mode.  If you are in insert mode, you'll see those words in the bottom left of the screen.  if you are not, you'll see something else. :)
+
+To enter insert mode press
+
+  i 
+  
+That's it. Just i.
+
+To leave insert mode press
+
+  Esc
+
+Try doing that a few times.  See you you can leave and enter the INSERT mode whenever you want to.
+
+Ok.  Enough play.  Go into insert mode, and type a story about your christmas (or whatever your diary entry is about).
+
+Make it a few lines long.  
+
+When you are done, press Esc to leave insert mode.
+
+*Things are not saved!*
+
+You can't just quit now - you'll need to save your changes.  
+
+In Vim, you can save the file by typing
+
+  :write
+  
+And then pressing entr.  In the bottom right, it should tell you that your file was written.
+
+Now you can re-enter INSERT mode and keep typing.  Do so. Please add some more detail. Make sure your topic sentences make sense!
+
+When done, leave INSERT mode, by pressing Esc.  
+
+Write the file to the disk.
+
+Now, to leave type
+
+  :quit
+  
+and press enter.
+
+All done!
+
+#### Check it out!
+
+You can check that you have done well, by typing 
+
+  ls
+
+Now - you should see your diary entry!
+
+You can re-open it by typing
+
+  vim my-christmas
+  
+And you should see the diary entry you just saved.  
+
+HAVE FUN!
+
