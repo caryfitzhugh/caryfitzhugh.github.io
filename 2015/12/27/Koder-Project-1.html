@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Koder Project #1 - Cary.FitzHugh</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Koder Project #1">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Koder Project #1">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="//caryfitzhugh.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+
+    <link rel="canonical" href="https://caryfitzhugh.github.io/2015/12/27/Koder-Project-1.html" />
+    
+    <meta property="og:site_name" content="Cary.FitzHugh" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Koder Project #1" />
+    <meta property="og:description" content="The Christmas present was delivered, on time, but with limited functionality.  I went with agile, and chose 2.  He was thrilled despite my incomplete present. I set him up with Vim, and he learned a few shell commands. cd ls..." />
+    <meta property="og:url" content="https://caryfitzhugh.github.io/2015/12/27/Koder-Project-1.html" />
+    <meta property="article:published_time" content="2015-12-27T05:00:00.000Z" />
+    <meta property="article:modified_time" content="2015-12-28T03:28:36.006Z" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Koder Project #1" />
+    <meta name="twitter:description" content="The Christmas present was delivered, on time, but with limited functionality.  I went with agile, and chose 2.  He was thrilled despite my incomplete present. I set him up with Vim, and he learned a few shell commands. cd ls..." />
+    <meta name="twitter:url" content="https://caryfitzhugh.github.io/2015/12/27/Koder-Project-1.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Cary.FitzHugh",
+    "author": {
+        "@type": "Person",
+        "name": "Cary FitzHugh",
+        "image": "https://avatars.githubusercontent.com/u/445848?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "Koder Project #1",
+    "url": "https://caryfitzhugh.github.io/2015/12/27/Koder-Project-1.html",
+    "datePublished": "2015-12-27T05:00:00.000Z",
+    "dateModified": "2015-12-28T03:28:36.006Z",
+    "description": "The Christmas present was delivered, on time, but with limited functionality.  I went with agile, and chose 2.  He was thrilled despite my incomplete present. I set him up with Vim, and he learned a few shell commands. cd ls..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Cary.FitzHugh" href="https://caryfitzhugh.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+</head>
+<body class="post-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="https://caryfitzhugh.github.io" title="link to homepage for Cary.FitzHugh">Cary.FitzHugh</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">A place for things to say.</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="https://caryfitzhugh.github.io/#blog" title="link to Cary.FitzHugh blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+              
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="https://github.com/caryfitzhugh" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+              
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="27 Dec 2015" class="post-meta__date date">27 Dec 2015</time> &#8226; <span class="post-meta__tags tags"></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/445848?v=3" alt="profile image for Cary FitzHugh" class="avatar post-meta__avatar" /> by Cary FitzHugh</span>
+      </div>
+      <h1 class="post-title">Koder Project #1</h1>
+    </header>
+
+    <section class="post">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Christmas present was delivered, on time, but with limited functionality.  I went with agile, and chose 2.  He was thrilled despite my incomplete present.</p>
+</div>
+<div class="paragraph">
+<p>I set him up with Vim, and he learned a few shell commands.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>cd</p>
+</li>
+<li>
+<p>ls</p>
+</li>
+<li>
+<p>vim <em>xxx</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Inside Vim I was able to teach him</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I - for insert mode</p>
+</li>
+<li>
+<p>Esc to leave insert mode</p>
+</li>
+<li>
+<p>:w to write the file</p>
+</li>
+<li>
+<p>:q to quit</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Using this small set of commands, he proceeded to "write himself a diary".  I think that is a really good first step for kids. So I&#8217;d suggest this:</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_project_1">Project 1</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_write_a_diary_entry">Write A Diary Entry</h3>
+<div class="sect3">
+<h4 id="_objective">Objective:</h4>
+<div class="literalblock">
+<div class="content">
+<pre>To write a diary entry and create a directory for diary entries.  Make sure that the entries can be added one at a time, their titles looked at, and removed entry by entry.</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The way we&#8217;ll do this is to log into your machine.</p>
+</div>
+<div class="paragraph">
+<p>Look at the files in your current directory</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ls</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look for a directory which is called "Diary" - you probably don&#8217;t see one. If you do - you probably already did this project!</p>
+</div>
+<div class="paragraph">
+<p>We want to create a "directory" or a "folder" to collect and keep all your diary entries. The entries you&#8217;ll make as you write down all the things you learn :)</p>
+</div>
+<div class="paragraph">
+<p>So - you first need to figure out a name for the directory.  Think of it like - what do you want to name your Diary?</p>
+</div>
+<div class="paragraph">
+<p>My son&#8217;s name is Kaeden, so we&#8217;ll name it</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>kaedens-diary</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice there aren&#8217;t any spaces in that name!  You don&#8217;t want spaces in file or directory names.  They are just a pain.  If I told you to open a file like this:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>open a really bad file</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>How could you know if it was called</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>a really bad file</p>
+</li>
+<li>
+<p>Or two files:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>a really bad</p>
+</li>
+<li>
+<p>file</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Or these two:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>a really</p>
+</li>
+<li>
+<p>bad file</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Maybe these two?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>a</p>
+</li>
+<li>
+<p>really bad file</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Maybe 3 files?!?</p>
+<div class="ulist">
+<ul>
+<li>
+<p>a really</p>
+</li>
+<li>
+<p>bad</p>
+</li>
+<li>
+<p>file</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>&#8230;&#8203;.. And on and on.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As you can probably guess by now - there are many many ways to misunderstand someone when they are typing and you allow file names to have spaces.  If you can&#8217;t figure it out - your dumb computer will definitely never be able to figure it out.  There <strong>are</strong> some ways to sortof force the computer to use spaces, but <em>don&#8217;t do it</em>.  The computer works best without spaces.  Be nice.</p>
+</div>
+<div class="paragraph">
+<p>So - let&#8217;s say your name is &#8230;&#8203; "Aragorn".  You could name your diary directory</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>aragorns-diary</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Also - no capitalz.  They just make things harder and &#8230;&#8203; believe me.  You&#8217;ll think capitals are cool until you can&#8217;t remember if you called the file "USA-photos", "UsaPhotos", "USA-Photos"&#8230;&#8203;  Just don&#8217;t do it.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_create_the_directory">Create the directory</h4>
+<div class="literalblock">
+<div class="content">
+<pre>cd aragorns-diary</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This creates the directory. An empty directory.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_check">Check</h4>
+<div class="literalblock">
+<div class="content">
+<pre>ls</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Look at the files, and you should see the diary there! Yay!</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_enter_that_directory">Enter that directory</h4>
+<div class="paragraph">
+<p>You are "in" a directory right now. It is your home directory.  You&#8217;ll want to move down from where you are and entry the diary directory.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cd aragorns-diary</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_now_look_around">Now look around</h4>
+<div class="paragraph">
+<p>If you do an</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ls</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>now, you&#8217;ll see nothing.  That&#8217;s because you are now "inside" the diary directory. And it is empty.  If you want to go "up" (which takes you back home) - you can use ".."  That is a special filename meaning "the directory above this one".</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cd ..</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That takes you up.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>cd  aragorns-directory</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That takes you back in.</p>
+</div>
+<div class="paragraph">
+<p>If you get <strong>really</strong> lost, and are "cd"'ing all over the computer like a dungeon explorer, you can always "go home" with a plain old "cd".</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_creating_an_entry">Creating an Entry</h4>
+<div class="paragraph">
+<p>From wherever you are - go to the diary directory. You might need to cd, then cd into your diary directory. However you get there. Get there.</p>
+</div>
+<div class="paragraph">
+<p>Now you will learn how to edit a file.</p>
+</div>
+<div class="paragraph">
+<p>Decide what you want to name the entry.  every file already has a timestamp (when it was modified) - so you don&#8217;t need to put the date in the name. Maybe pick a topic to write about. Like</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>my-christmas</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Remember! No capitals, no spaces. Perfect!</p>
+</div>
+<div class="paragraph">
+<p>You want to open that file with Vim.</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vim my-christmas</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You are now in the worlds best editor™</p>
+</div>
+<div class="paragraph">
+<p>To keep it simple.  To add words and change things you need to be in <strong>--INSERT--</strong> mode.  If you are in insert mode, you&#8217;ll see those words in the bottom left of the screen.  if you are not, you&#8217;ll see something else. :)</p>
+</div>
+<div class="paragraph">
+<p>To enter insert mode press</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>i</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it. Just i.</p>
+</div>
+<div class="paragraph">
+<p>To leave insert mode press</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Esc</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Try doing that a few times.  See you you can leave and enter the INSERT mode whenever you want to.</p>
+</div>
+<div class="paragraph">
+<p>Ok.  Enough play.  Go into insert mode, and type a story about your christmas (or whatever your diary entry is about).</p>
+</div>
+<div class="paragraph">
+<p>Make it a few lines long.</p>
+</div>
+<div class="paragraph">
+<p>When you are done, press Esc to leave insert mode.</p>
+</div>
+<div class="paragraph">
+<p><strong>Things are not saved!</strong></p>
+</div>
+<div class="paragraph">
+<p>You can&#8217;t just quit now - you&#8217;ll need to save your changes.</p>
+</div>
+<div class="paragraph">
+<p>In Vim, you can save the file by typing</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>:write</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And then pressing entr.  In the bottom right, it should tell you that your file was written.</p>
+</div>
+<div class="paragraph">
+<p>Now you can re-enter INSERT mode and keep typing.  Do so. Please add some more detail. Make sure your topic sentences make sense!</p>
+</div>
+<div class="paragraph">
+<p>When done, leave INSERT mode, by pressing Esc.</p>
+</div>
+<div class="paragraph">
+<p>Write the file to the disk.</p>
+</div>
+<div class="paragraph">
+<p>Now, to leave type</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>:quit</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and press enter.</p>
+</div>
+<div class="paragraph">
+<p>All done!</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_check_it_out">Check it out!</h4>
+<div class="paragraph">
+<p>You can check that you have done well, by typing</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>ls</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now - you should see your diary entry!</p>
+</div>
+<div class="paragraph">
+<p>You can re-open it by typing</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>vim my-christmas</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And you should see the diary entry you just saved.</p>
+</div>
+<div class="paragraph">
+<p>HAVE FUN!</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+    </section>
+
+  </article>
+
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2015. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//caryfitzhugh.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+
+</body>
+</html>
