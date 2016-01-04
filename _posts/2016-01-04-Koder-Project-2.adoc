@@ -1,0 +1,8 @@
+# Koder Project #2
+
+This project will teach some basic beginnings of GCL and files and how to run things.
+
+## Goal
+
+The end goal is to write a program which will start, ask for your name, say hello, and exit.  A typical Hello, World program, with a bit of pizzaz.
+
