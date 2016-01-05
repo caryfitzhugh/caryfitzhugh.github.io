@@ -1,0 +1,60 @@
+# Setting Up The Koder
+
+I wanted to add a bit of polish to the flash image and setup of the Koder system I'm working on.
+
+Right now - my son is writing stuff straight to the sd card. This got him up and running but - dang, it is annoying to have that because I can't rev the firmware easily.  
+
+So - my plan is to do the following:
+
+* automatically mount the USB drive to /koder-data
+** make sure it is not FAT - but something nicer. I went crazy and picked ext4 (http://okomestudio.net/biboroku/?p=291)
+
+** http://solutionsandtips.blogspot.com/2009/05/uuid-fstab-and-automatically-mount-usb.html
+** I had to find the blkid of my USB drive.  
+
+  debian@beaglebone:~$ blkid /dev/sda1
+  
+  /dev/sda1: UUID="32bf3bbc-d2e4-4c66-960e-ea8053faf0bc" TYPE="ext4"
+
+** make the /mnt/koder-data directory
+
+  mkdir /mnt/koder-data
+  
+** add to /etc/fstab
+
+  UUID=32bf3bbc-d2e4-4c66-960e-ea8053faf0bc  /mnt/koder-data auto defaults 0 0
+
+** run mount -a to make sure it all works
+
+*  add a user for my son (kaeden) - which has a home dir on /koder-data
+
+  sudo useradd -m -b /mnt/koder-data -c "Kaeden FitzHugh" kaeden
+
+** http://unix.stackexchange.com/questions/42398/how-do-i-set-the-password-of-a-new-user-after-the-account-has-already-been-creat
+
+
+## The result
+
+Now when my son connects, he can log in as kaeden, and his home directory is on the USB memory stick. Woot!
+
+The next trick is to install the other parts of the image that I want. Things like binaries and programs.
+
+One program I want is common lisp.
+
+  sudo apt-get install gcl
+  
+It installs a bunch of emacs things -- oh well.  
+
+GCL is loaded!
+
+Now to save off this image.
+
+
+Here we go. 1.0 Koder image!
+https://github.com/caryfitzhugh/caryfitzhugh.github.io/raw/master/resources/Koder-1.0.img.gz
+
+  
+
+
+
+  
