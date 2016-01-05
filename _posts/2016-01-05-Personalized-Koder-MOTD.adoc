@@ -1,0 +1,40 @@
+# Personalized Koder MOTD
+
+So - I wanted to have some pizazz when he logged in.
+
+++++
+<pre>
+
+   ▄█   ▄█▄    ▄████████    ▄████████ ████████▄     ▄████████ ███▄▄▄▄      ▄████████ 
+  ███ ▄███▀   ███    ███   ███    ███ ███   ▀███   ███    ███ ███▀▀▀██▄   ███    ███ 
+  ███▐██▀     ███    ███   ███    █▀  ███    ███   ███    █▀  ███   ███   ███    █▀  
+ ▄█████▀      ███    ███  ▄███▄▄▄     ███    ███  ▄███▄▄▄     ███   ███   ███        
+▀▀█████▄    ▀███████████ ▀▀███▀▀▀     ███    ███ ▀▀███▀▀▀     ███   ███ ▀███████████ 
+  ███▐██▄     ███    ███   ███    █▄  ███    ███   ███    █▄  ███   ███          ███ 
+  ███ ▀███▄   ███    ███   ███    ███ ███   ▄███   ███    ███ ███   ███    ▄█    ███ 
+  ███   ▀█▀   ███    █▀    ██████████ ████████▀    ██████████  ▀█   █▀   ▄████████▀  
+  ▀                                                                                  
+   ▄█   ▄█▄  ▄██████▄  ████████▄     ▄████████    ▄████████                          
+  ███ ▄███▀ ███    ███ ███   ▀███   ███    ███   ███    ███                          
+  ███▐██▀   ███    ███ ███    ███   ███    █▀    ███    ███                          
+ ▄█████▀    ███    ███ ███    ███  ▄███▄▄▄      ▄███▄▄▄▄██▀                          
+▀▀█████▄    ███    ███ ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀▀▀                            
+  ███▐██▄   ███    ███ ███    ███   ███    █▄  ▀███████████                          
+  ███ ▀███▄ ███    ███ ███   ▄███   ███    ███   ███    ███                          
+  ███   ▀█▀  ▀██████▀  ████████▀    ██████████   ███    ███                          
+  ▀                                              ███    ███                         
+
+</pre>
+++++
+
+How great is that??
+
+You need to set the message in /etc/motd
+
+(To do this log in as debian, so you can sudo).
+
+Also - /etc/ssh/sshd_config: Change the setting PrintLastLog to "no", this will disable the "Last login" message.  ANd change PrintMotd to "yes".  This displays the beautifulness.
+
+https://github.com/caryfitzhugh/caryfitzhugh.github.io/raw/master/resources/Koder-1.1.img.gz
+
+
