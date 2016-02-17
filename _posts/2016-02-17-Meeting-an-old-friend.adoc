@@ -1,0 +1,14 @@
+# Meeting an old friend
+
+As my time at CondeNast / ZipList continues to wind down I've started to look for what is next.  And many of those opportunities are Rails-based.  I've been hanging with the Clojure crowd for the last year+ and so my Rails is a bit dusty.  I'm sure things have moved on a bit in the time I've been away, and I don't remember the syntax off the top of my head as well as I would have liked.
+
+Not wanting to be caught off-guard, I've decided to build a small Rails app, just to remember things.
+
+I started on a "Daily Journal" -- my father in law got me a 10 year journal. Each page is split into 10 small parts, and every day for 10 years you write a little blurb.  For each day, you can look back and see what you were doing on that day the previous year.  I'm sortof intrigued by this, and so - I'll make this my application.
+
+Even seeing the config/database.yml file is a blast from the past.  Onward we go!
+
+I'll be deploying and pushing things to https://stark-brook-49382.herokuapp.com/ as I go.
+
+The repo is https://github.com/caryfitzhugh/daily-journal
+
