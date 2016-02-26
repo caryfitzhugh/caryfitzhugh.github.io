@@ -1,0 +1,20 @@
+= "GO"-ing forward	
+
+Well - on to new and exciting things!   I hope that in the near future I'll have to figure out how to deploy and run go services.  And those go services are so light-weight, that I'm intrigued by running them inside elastic beanstalk with t2.micros.
+
+t2.micros are teeny, have low-ish RAM, but - have bursty access to fast CPUs.  All for $6.50 / mo!  
+
+So - I've started a project https://github.com/caryfitzhugh/gorista[gorista].
+
+It will be a simple go-websocket server, which echos.  Really, because that isn't the hard part here.  It serves a single HTML page from root, which connects to the websocket. Bang. Done.
+
+Now - the "hard" part is writing some sugar / spice / everything nice to be able to deploy this go project onto EB with a few commands.
+
+I'm used to lein beanstalk deploy, so I'm hoping to get something like that.
+Maybe my first go-project to opensource? Maybe / maybe not.
+
+I've gotten the repo ready https://github.com/caryfitzhugh/go-bean[go-bean]
+
+My first cut at a deploy script worked, so I was able to deploy my gorista app on AWS. Woot.
+
+More to come!
