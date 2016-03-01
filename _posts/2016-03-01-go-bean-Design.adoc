@@ -1,0 +1,25 @@
+# go-bean Design	
+
+The go-bean binary is coming along. Learning a lot more about go!
+
+There will be a few main commands
+
+### init
+  This command will create the .go-bean config file and help you initialize it
+  
+### config
+   This command will display the current configuration for go-bean
+   
+### release
+   This will package the current code, tag it in git, create the docker image, push that to the ECR, and create a new application version on EB
+   
+### deploy
+   This will deploy a version (maybe most recent by default) to a given environment.  The environments can be given aliases in the config file
+   
+   
+Anyway. Onward we go!  Just about finished all the config and init commands.
+Decided to go with the https://github.com/codegangsta/cli[code-gangsta CLI library]
+
+JSON marshalling / unmarshalling with static types is quite "refreshing" - it's interesting.  I am no longer documenting said messages, but it's much more brittle. I can't easily let users add arbitrary data to my config hash (which is a shame).  
+
+http://github.com/caryfitzhugh/go-bean
