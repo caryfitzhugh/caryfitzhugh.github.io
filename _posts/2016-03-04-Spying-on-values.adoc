@@ -1,0 +1,60 @@
+# Spying on values	
+
+What I tend to do in clojure is work functionally down and up. And meet somewhere in the middle.
+
+That may not be really all that interesting, but it means that I do a lot of logging at the start and end of functions.  To see what is going in and coming out.  Now that I think of it, I should make a macro to do this.
+
+Well - I was going to blog about "spy" which is something I just found.  I would end up with a function like this:
+
+```clojure
+   (defn func [v]
+      (+ 1 v))
+```
+
+well, that's an easy result to figure out. But in the case of manipulating maps,lists, sets, vectors, etc. You can get some tricky things.
+
+I would usually be reduced to this:
+```clojure
+   (defn func [v]
+      (let [res (+ 1 v))]
+        (println (pr-str res)
+        res))
+```
+
+That's a lot of typing! And it shoulnd't need to be that way.
+
+### Enter "spy"
+
+Sometimes a good google search can really help. I thought
+  There much be a function already written that does this.
+  
+And there is.
+
+https://clojure.github.io/tools.logging/#clojure.tools.logging/spy[logging#spy]
+
+
+
+end up with a function like this:
+
+```clojure
+   (defn func [v]
+      (spy (+ 1 v)))
+```
+
+Now -- to write a macro, that could be used like so:
+
+```
+   (defn-log func [v]
+       (+ 1 v))
+```
+
+That's pretty sweet.
+
+
+And it gets even better!
+
+https://github.com/dgrnbrg/spyscope[spyscope]
+
+This is great: https://github.com/dgrnbrg/spyscope#spyd
+
+Well - enjoy!
