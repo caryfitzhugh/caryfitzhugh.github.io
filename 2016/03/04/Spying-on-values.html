@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Spying on values - Cary.FitzHugh</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Spying on values">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Spying on values">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="//caryfitzhugh.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+
+    <link rel="canonical" href="https://caryfitzhugh.github.io/2016/03/04/Spying-on-values.html" />
+    
+    <meta property="og:site_name" content="Cary.FitzHugh" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Spying on values" />
+    <meta property="og:description" content="What I tend to do in clojure is work functionally down and up. And meet somewhere in the middle. That may not be really all that interesting, but it means that I do a lot of logging at the start..." />
+    <meta property="og:url" content="https://caryfitzhugh.github.io/2016/03/04/Spying-on-values.html" />
+    <meta property="article:published_time" content="2016-03-04T05:00:00.000Z" />
+    <meta property="article:modified_time" content="2016-03-04T14:38:46.470Z" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Spying on values" />
+    <meta name="twitter:description" content="What I tend to do in clojure is work functionally down and up. And meet somewhere in the middle. That may not be really all that interesting, but it means that I do a lot of logging at the start..." />
+    <meta name="twitter:url" content="https://caryfitzhugh.github.io/2016/03/04/Spying-on-values.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Cary.FitzHugh",
+    "author": {
+        "@type": "Person",
+        "name": "Cary FitzHugh",
+        "image": "https://avatars.githubusercontent.com/u/445848?v=3",
+        "url": "undefined/author/undefined",
+        "sameAs": null
+    },
+    "headline": "Spying on values",
+    "url": "https://caryfitzhugh.github.io/2016/03/04/Spying-on-values.html",
+    "datePublished": "2016-03-04T05:00:00.000Z",
+    "dateModified": "2016-03-04T14:38:46.470Z",
+    "description": "What I tend to do in clojure is work functionally down and up. And meet somewhere in the middle. That may not be really all that interesting, but it means that I do a lot of logging at the start..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Cary.FitzHugh" href="https://caryfitzhugh.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+</head>
+<body class="post-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="https://caryfitzhugh.github.io" title="link to homepage for Cary.FitzHugh">Cary.FitzHugh</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">A place for things to say.</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="https://caryfitzhugh.github.io/#blog" title="link to Cary.FitzHugh blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+              
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="https://github.com/caryfitzhugh" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+              
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="04 Mar 2016" class="post-meta__date date">04 Mar 2016</time> &#8226; <span class="post-meta__tags tags"></span>
+        <span class="post-meta__author author"><img src="https://avatars.githubusercontent.com/u/445848?v=3" alt="profile image for Cary FitzHugh" class="avatar post-meta__avatar" /> by Cary FitzHugh</span>
+      </div>
+      <h1 class="post-title">Spying on values</h1>
+    </header>
+
+    <section class="post">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>What I tend to do in clojure is work functionally down and up. And meet somewhere in the middle.</p>
+</div>
+<div class="paragraph">
+<p>That may not be really all that interesting, but it means that I do a lot of logging at the start and end of functions.  To see what is going in and coming out.  Now that I think of it, I should make a macro to do this.</p>
+</div>
+<div class="paragraph">
+<p>Well - I was going to blog about "spy" which is something I just found.  I would end up with a function like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-clojure" data-lang="clojure">   (defn func [v]
+      (+ 1 v))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>well, that&#8217;s an easy result to figure out. But in the case of manipulating maps,lists, sets, vectors, etc. You can get some tricky things.</p>
+</div>
+<div class="paragraph">
+<p>I would usually be reduced to this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-clojure" data-lang="clojure">   (defn func [v]
+      (let [res (+ 1 v))]
+        (println (pr-str res)
+        res))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s a lot of typing! And it shoulnd&#8217;t need to be that way.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_enter_spy">Enter "spy"</h3>
+<div class="paragraph">
+<p>Sometimes a good google search can really help. I thought
+  There much be a function already written that does this.</p>
+</div>
+<div class="paragraph">
+<p>And there is.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://clojure.github.io/tools.logging/#clojure.tools.logging/spy">logging#spy</a></p>
+</div>
+<div class="paragraph">
+<p>end up with a function like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-clojure" data-lang="clojure">   (defn func [v]
+      (spy (+ 1 v)))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now&#8201;&#8212;&#8201;to write a macro, that could be used like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>   (defn-log func [v]
+       (+ 1 v))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s pretty sweet.</p>
+</div>
+<div class="paragraph">
+<p>And it gets even better!</p>
+</div>
+<div class="paragraph">
+<p><a href="https://github.com/dgrnbrg/spyscope">spyscope</a></p>
+</div>
+<div class="paragraph">
+<p>This is great: <a href="https://github.com/dgrnbrg/spyscope#spyd" class="bare">https://github.com/dgrnbrg/spyscope#spyd</a></p>
+</div>
+<div class="paragraph">
+<p>Well - enjoy!</p>
+</div>
+</div>
+    </section>
+
+  </article>
+
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2016. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//caryfitzhugh.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+
+</body>
+</html>
