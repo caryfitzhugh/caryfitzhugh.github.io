@@ -1,0 +1,40 @@
+# Go-Bean Progress!	
+
+  go-bean install
+  
+Now you have access to go-bean.
+
+Currently all you can do is go-bean config and init.
+
+Init will let you set values in the .go-bean file.  
+Config will print out those values.
+
+The only value currently needed is the ApplicationName.
+
+Eventually we will add environments (so we can alias things) and have defaults.
+But that will come soon.
+
+Now I am working on releasing snapshots.
+
+It made me realize I want a 
+
+ go-bean snapshot
+
+and
+
+ go-bean release
+ 
+so that we can keep these two things separate.
+
+Both will package up the code into a docker , push it to the ECR, and create an application version, and then deploy that.  But release will do it for "real" builds.
+
+### New Wants
+#### Want Config to allow me to have multiple environments.
+Each environment should  let me specify if snapshots can be sent to it. (if not, then you'd need to force it)
+Each environment has a name, and then an alias, and the first one is the default.
+
+
+#### Custom Docker path (if you wanted to do a custom dockerfile...)
+
+#### Cleanup the ECR images
+Should be able to find the older ones and remove them .  A command "cleanup", or something. I think AWS limits you to 50 images to start with. That should be enough, but...
