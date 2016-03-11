@@ -7,8 +7,8 @@ I have no idea what it should really do, so I'll make up some requirements:
 * Be built on CLJS Reagent on the front end
 * Use Leaflet to display / zoom on a 3GB image file http://stackoverflow.com/questions/13110763/is-leaflet-a-good-tool-for-non-map-images
 * Allow for pan / zoom
-* URL tracks position / zoom
-* Generate the tiles from a large image (this 4.3GB file - https://www.spacetelescope.org/images/heic1502a/)
+* URL tracks position / zoom (wait for user to stop for a bit, then capture the location, update the URL).  So you can fwd / back the map and drawing.
+* Generate the tiles from a large image (this 4.3GB file - https://www.spacetelescope.org/images/heic1502a/)  -- and spit them into S3 to be served as Leaflet tiles.
 
 
 We want to have a toolbar on the left.
