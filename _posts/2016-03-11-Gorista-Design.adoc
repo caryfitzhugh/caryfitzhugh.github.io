@@ -1,0 +1,32 @@
+# Gorista Design	
+
+Gorista is a go-lang server running on EB (on t2.nanos!).  
+
+I have no idea what it should really do, so I'll make up some requirements:
+
+* Be built on CLJS Reagent on the front end
+* Use Leaflet to display / zoom on a 3GB image file http://stackoverflow.com/questions/13110763/is-leaflet-a-good-tool-for-non-map-images
+* Allow for pan / zoom
+* URL tracks position / zoom
+* Generate the tiles from a large image (this 4.3GB file - https://www.spacetelescope.org/images/heic1502a/)
+
+
+We want to have a toolbar on the left.
+In the top right there should be an "overview" panel, showing the current center/extent of the map viewer.
+
+Zoom in / out should be supported.
+
+Ingest a new image. -- and it should be posted in the bits and pieces into S3.
+Lots and LOTS of data!  Each zoom-level and each tile.
+
+Security: Use cloudfront and secure that way. http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/PrivateContent.html
+
+Cloudfront points to S3.
+
+The CLJS client should be in a separate repository.
+It is written  / tested / versioned, and then released in Github.
+
+Those releases are pulled down and put into the public dir of the gorista release. And pushed up that way.
+
+
+
