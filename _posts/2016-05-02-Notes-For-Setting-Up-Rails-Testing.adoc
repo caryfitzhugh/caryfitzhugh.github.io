@@ -1,0 +1,20 @@
+# Notes For Setting Up Rails Testing	
+
+This is just a scratchpad of sorts for all my troubles in trying to get things spun up.
+
+I really really don't like large automated test suites which run real browsers.  The amount of time I've spent trying to make these stupid things work consistently in the last 7+ years easily dwarfs (maybe even my an order of magnitude) the time saved from a broken test.  These things tend to just find the really really obvious breakages.  
+
+Regardless!!  We need to set them up.  I run a linux dev server, and like that setup. My mac is the portable front end, and my dev server can keep running things all the time (is always on) etc. etc.  I use mosh as well, which has been great too.
+
+ok - so.
+
+### XVFB
+http://elementalselenium.com/tips/38-headless
+I like the xvfb-run command. Seems to let my specs run w/o a head, which is great.
+
+### X11 
+To get screenshots back to my mac, I need X11 to run (I don't want to be copying files..)
+Install X11 Quartz (and reboot)
+Set ForwardX11 yes in .ssh/config
+
+
