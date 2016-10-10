@@ -1,0 +1,10 @@
+# Bass Guitar Build
+
+Step 1
+
+Tonight, we took some hard maple, and cut it into 2" x 1" x 46" strips.
+Laminating three together with a lot of glue.  Clamping the wood every 4-6" inches.  It is a big mess, but should produce neck blanks which are perfect for a bass guitar neck through body.  46" x 3" wide x 2" thick.
+
+Planning to pass them through the planer to clean up the top and bottom.  With the wood grain going vertically, it should be stronger.  I tried to have the grain oriented so that each piece is "opposite" of the piece next to it.
+
+Next step:   Design the CAD files for the templates.
