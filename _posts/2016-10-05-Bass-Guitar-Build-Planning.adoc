@@ -1,0 +1,40 @@
+# Bass Guitar Build Planning
+
+So I'm going to build my son a bass. I built myself an electric this spring, everything except for the neck.  For this bass, I'm going to build it all. Neck will be an interesting challenge.  Using this as a place to keep track of what I learn / decide / plan.
+I really like the stingray bass style... So I'll probably pull off of that a whole lot.
+
+4 - string bass -- my templates for neck pockets are for 4 string basses, and for a first one, let's keep it simple
+
+single humbucker -- a'la musicman.  
+  http://www.seymourduncan.com/pickup/music-man-ceramic
+  
+Neck -- n-ply maple / oak neck with hickory fretboard
+  green epoxy dots / squares. Aluminum outside + green epoxy filler
+  under the dots, embed small clear white LEDs, powered by a small coin battery
+     with a small switch. On each of the colored dots above.
+     
+Bridge: Gotoh -- I put that on my electric, it was nice.
+  https://www.allparts.com/BB-0356-003-Black-Gotoh-Bass-Bridge_p_592.html
+  http://www.warmoth.com/Gotoh-201-4-String-Bass-Bridge-Chrome-P138C718.aspx
+  It is 17.5mm from string to string (
+
+Finish:
+   plain oil.
+   edging with tape around the front
+   back is brown.
+   
+Electronics:
+   I would like to split the coils. So some switch to give single / dual would be good
+   Tone
+   Vol
+   
+Pickguard? Maybe... White / Black, like a MusicMan.
+   
+Scale: 32"
+
+Parts Costs:
+  Truss Rod: $20
+  Finish (free)
+  Binding: $15
+  
+ 
