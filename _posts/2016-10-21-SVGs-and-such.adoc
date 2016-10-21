@@ -1,0 +1,19 @@
+# SVGs  and such
+
+I'm a nerd, and so building a guitar / bass neck and body seems like a big math problem.
+Just (for normal numbers) punch in things like thickness at different frets, volute size, headstock angle, scale length, etc.. and you should be able to get the basic templates for neck top and side profiles.
+The body shape is "whatever you want" - but the really important things should be calculatable.
+
+So .. https://github.com/caryfitzhugh/guitar
+
+I can do somewhat of an SVG for a neck side profile.
+
+I'd like to also be able to do one for the neck top-down route.
+
+
+The rest I can do easily enough.
+
+Once you get what you want, you can export the SVG (the units are in inches)
+https://chrome.google.com/webstore/detail/export-svg-with-style/dkjdcaddoplepioppogpckelchefhddi/related?hl=en-GB
+
+Well - it's a work in progress, but... maybe it's helpful to someone!
