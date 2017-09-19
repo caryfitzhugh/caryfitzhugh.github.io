@@ -1,0 +1,28 @@
+# Gold Plated Architecture
+
+
+I was recently talking with someone about CQRS and ES architectures.  Judging by the advertisements, CQRS and ES seem to solve just about all your problems.  They scale, they allow for microservices and distributed computing, they allow for neat things like replay, and if you do it correctly, you can have one architecture for the rest of your software's life - because CQRS and ES can "do it all"™.  It has every buzzword attached.
+
+Unfortunately, dropping CQRS/ES into an app which doesn't need it, is like paying for a 1960 Les Paul (at time of writing $325,000) when you can't yet use your current guitar to it's fullest.  That Les Paul is going to be great in some ways, but also extremely finicky in others (don't drop it!).  Nothing is for free - everything is a tradeoff in time, complexity, or money.  
+
+Simple
+^^^^^
+I  think the best and most efficient way to build systems is in 2 year phases.  Build the simplest things that will get you through the next 2-3 years.  By then your system will have changed, your people will probably have changed, technology will have changed, your business will have changed.   There won't be much that hasn't changed.  In fact, even the code you write will change.  Why spend so much time and hassle on complex systems - *unless you are actually gaining the benefits*? 
+
+Different Focus
+^^^^^^
+Spend much more time on the interfaces and how data is moving and stored in the system. That will (hopefully) not change nearly as much as the technology. If you build it well, switching out SQS for RabbitMQ, or Kafka is not a laborious months long task.  If you design it well - adding features is not a tricky hack-fest - things have their proper place.  But don't throw technology at the problem and think "we don't have to design anything because we're using fancy technology X".  
+
+MicroServices Are ... It Depends
+^^^^^^^
+____
+  If you are the one who will make the update in all the microservices - you don't need microservices
+____
+
+I have built my dream architecture back when I thought microservices were fun. They are only fun when you can pretend there is no complexity.  That magically all these little bits of code will "just work" and won't have diabolical failure cases, nor run out of disk space, nor have versioning headaches.
+
+Developing locally with micro-services is at least 2x harder than doing the same thing with a monolith.  If you want to make it easier to develop, then you need to bring in more tooling (docker-compose, etc) - which may make development easier, but now on boarding engineers and debugging dev environment issues are likewise harder.  The more abstractions you add, the less you are in touch with the code. And then - you lose.  You lose in so many ways - technologically, culturally.
+
+If you really need microservices, by all means, load us up.  Let's get the distributed logs going, the kafka stream, the local dev environment, the CICD pipeline, the multiple repos (and determine how we'll keep things in sync), the test harnesses which can run integration tests on micro-services.  
+
+But if you don't need them yet - I'd strongly suggest you walk before you run.  Do something simple, and when you run out of runway on the simple solution - you'll know a *lot* more about what you need to do in the future.  And as long as you keep your design clean - you'll have the flexibility to make the necessary changes "JIT". :)
