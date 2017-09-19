@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <title>Gold Plated Architecture - Cary.FitzHugh</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Gold Plated Architecture">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Gold Plated Architecture">
+    <meta property="og:description" content="">
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link rel="stylesheet" type="text/css" href="//caryfitzhugh.github.io/themes/uno/assets/css/uno.css?v=1.0.0" />
+
+    <link rel="canonical" href="https://caryfitzhugh.github.io/2017/09/19/Gold-Plated-Architecture.html" />
+    
+    <meta property="og:site_name" content="Cary.FitzHugh" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Gold Plated Architecture" />
+    <meta property="og:description" content="I was recently talking with someone about CQRS and ES architectures.  Judging by the advertisements, CQRS and ES seem to solve just about all your problems.  They scale, they allow for microservices and distributed computing, they allow for neat things..." />
+    <meta property="og:url" content="https://caryfitzhugh.github.io/2017/09/19/Gold-Plated-Architecture.html" />
+    <meta property="article:published_time" content="2017-09-19T04:00:00.000Z" />
+    <meta property="article:modified_time" content="2017-09-19T12:55:30.554Z" />
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Gold Plated Architecture" />
+    <meta name="twitter:description" content="I was recently talking with someone about CQRS and ES architectures.  Judging by the advertisements, CQRS and ES seem to solve just about all your problems.  They scale, they allow for microservices and distributed computing, they allow for neat things..." />
+    <meta name="twitter:url" content="https://caryfitzhugh.github.io/2017/09/19/Gold-Plated-Architecture.html" />
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Article",
+    "publisher": "Cary.FitzHugh",
+    "author": {
+        "@type": "Person",
+        "name": "Cary FitzHugh",
+        "image": "https://avatars1.githubusercontent.com/u/445848?v=4",
+        "url": "undefined/author/undefined",
+        "sameAs": ""
+    },
+    "headline": "Gold Plated Architecture",
+    "url": "https://caryfitzhugh.github.io/2017/09/19/Gold-Plated-Architecture.html",
+    "datePublished": "2017-09-19T04:00:00.000Z",
+    "dateModified": "2017-09-19T12:55:30.554Z",
+    "description": "I was recently talking with someone about CQRS and ES architectures.  Judging by the advertisements, CQRS and ES seem to solve just about all your problems.  They scale, they allow for microservices and distributed computing, they allow for neat things..."
+}
+    </script>
+
+    <meta name="generator" content="Ghost ?" />
+    <link rel="alternate" type="application/rss+xml" title="Cary.FitzHugh" href="https://caryfitzhugh.github.io/rss" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/styles/default.min.css">
+
+</head>
+<body class="post-template no-js">
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    <header class="panel-cover panel-cover--collapsed " >
+      <div class="panel-main">
+    
+        <div class="panel-main__inner panel-inverted">
+        <div class="panel-main__content">
+    
+            <h1 class="panel-cover__title panel-title"><a href="https://caryfitzhugh.github.io" title="link to homepage for Cary.FitzHugh">Cary.FitzHugh</a></h1>
+            <hr class="panel-cover__divider" />
+            <p class="panel-cover__description">A place for things to say.</p>
+            <hr class="panel-cover__divider panel-cover__divider--secondary" />
+    
+            <div class="navigation-wrapper">
+    
+              <nav class="cover-navigation cover-navigation--primary">
+                <ul class="navigation">
+                  <li class="navigation__item"><a href="https://caryfitzhugh.github.io/#blog" title="link to Cary.FitzHugh blog" class="blog-button">Blog</a></li>
+                </ul>
+              </nav>
+    
+              
+              
+              <nav class="cover-navigation navigation--social">
+                <ul class="navigation">
+              
+              
+              
+              
+                  <!-- Github -->
+                  <li class="navigation__item">
+                    <a href="https://github.com/caryfitzhugh" title="Github account">
+                      <i class='icon icon-social-github'></i>
+                      <span class="label">Github</span>
+                    </a>
+                  </li>
+                  </li>
+              
+              
+              
+              
+              
+              
+                </ul>
+              </nav>
+              
+    
+            </div>
+    
+          </div>
+    
+        </div>
+    
+        <div class="panel-cover--overlay"></div>
+      </div>
+    </header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            
+
+  <article class="post-container post-container--single">
+
+    <header class="post-header">
+      <div class="post-meta">
+        <time datetime="19 Sep 2017" class="post-meta__date date">19 Sep 2017</time> &#8226; <span class="post-meta__tags tags"></span>
+        <span class="post-meta__author author"><img src="https://avatars1.githubusercontent.com/u/445848?v=4" alt="profile image for Cary FitzHugh" class="avatar post-meta__avatar" /> by Cary FitzHugh</span>
+      </div>
+      <h1 class="post-title">Gold Plated Architecture</h1>
+    </header>
+
+    <section class="post">
+      <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I was recently talking with someone about CQRS and ES architectures.  Judging by the advertisements, CQRS and ES seem to solve just about all your problems.  They scale, they allow for microservices and distributed computing, they allow for neat things like replay, and if you do it correctly, you can have one architecture for the rest of your software&#8217;s life - because CQRS and ES can "do it all"™.  It has every buzzword attached.</p>
+</div>
+<div class="paragraph">
+<p>Unfortunately, dropping CQRS/ES into an app which doesn&#8217;t need it, is like paying for a 1960 Les Paul (at time of writing $325,000) when you can&#8217;t yet use your current guitar to it&#8217;s fullest.  That Les Paul is going to be great in some ways, but also extremely finicky in others (don&#8217;t drop it!).  Nothing is for free - everything is a tradeoff in time, complexity, or money.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_simple">Simple</h4>
+<div class="paragraph">
+<p>I  think the best and most efficient way to build systems is in 2 year phases.  Build the simplest things that will get you through the next 2-3 years.  By then your system will have changed, your people will probably have changed, technology will have changed, your business will have changed.   There won&#8217;t be much that hasn&#8217;t changed.  In fact, even the code you write will change.  Why spend so much time and hassle on complex systems - <strong>unless you are actually gaining the benefits</strong>?</p>
+</div>
+<div class="paragraph">
+<p>Different Focus
+<sup>^</sup><sup>^</sup>
+Spend much more time on the interfaces and how data is moving and stored in the system. That will (hopefully) not change nearly as much as the technology. If you build it well, switching out SQS for RabbitMQ, or Kafka is not a laborious months long task.  If you design it well - adding features is not a tricky hack-fest - things have their proper place.  But don&#8217;t throw technology at the problem and think "we don&#8217;t have to design anything because we&#8217;re using fancy technology X".</p>
+</div>
+<div class="paragraph">
+<p>MicroServices Are &#8230;&#8203; It Depends
+<sup>^</sup><sup>^</sup>^</p>
+</div>
+<div class="quoteblock">
+<blockquote>
+<div class="literalblock">
+<div class="content">
+<pre>If you are the one who will make the update in all the microservices - you don't need microservices</pre>
+</div>
+</div>
+</blockquote>
+</div>
+<div class="paragraph">
+<p>I have built my dream architecture back when I thought microservices were fun. They are only fun when you can pretend there is no complexity.  That magically all these little bits of code will "just work" and won&#8217;t have diabolical failure cases, nor run out of disk space, nor have versioning headaches.</p>
+</div>
+<div class="paragraph">
+<p>Developing locally with micro-services is at least 2x harder than doing the same thing with a monolith.  If you want to make it easier to develop, then you need to bring in more tooling (docker-compose, etc) - which may make development easier, but now on boarding engineers and debugging dev environment issues are likewise harder.  The more abstractions you add, the less you are in touch with the code. And then - you lose.  You lose in so many ways - technologically, culturally.</p>
+</div>
+<div class="paragraph">
+<p>If you really need microservices, by all means, load us up.  Let&#8217;s get the distributed logs going, the kafka stream, the local dev environment, the CICD pipeline, the multiple repos (and determine how we&#8217;ll keep things in sync), the test harnesses which can run integration tests on micro-services.</p>
+</div>
+<div class="paragraph">
+<p>But if you don&#8217;t need them yet - I&#8217;d strongly suggest you walk before you run.  Do something simple, and when you run out of runway on the simple solution - you&#8217;ll know a <strong>lot</strong> more about what you need to do in the future.  And as long as you keep your design clean - you&#8217;ll have the flexibility to make the necessary changes "JIT". :)</p>
+</div>
+</div>
+    </section>
+
+  </article>
+
+
+
+
+            <footer class="footer">
+                <span class="footer__copyright">&copy; 2017. All rights reserved.</span>
+                <span class="footer__copyright"><a href="http://uno.daleanthony.com" title="link to page for Uno Ghost theme">Uno theme</a> by <a href="http://daleanthony.com" title="link to website for Dale-Anthony">Dale-Anthony</a></span>
+                <span class="footer__copyright">Proudly published with <a href="http://hubpress.io" title="link to Hubpress website">Hubpress</a></span>
+            </footer>
+        </div>
+    </div>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();      
+      </script>
+
+    <script type="text/javascript" src="//caryfitzhugh.github.io/themes/uno/assets/js/main.js?v=1.0.0"></script>
+    
+
+</body>
+</html>
