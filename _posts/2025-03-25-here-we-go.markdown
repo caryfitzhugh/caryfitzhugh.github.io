@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "Welcome to the project!"
+date:   2025-03-25 19:01:36 +0000
+categories: personal genesis
+---
+Oh my, well, a project like this has been going on for nearly half a century, give or take. And I keep having thoughts. Thoughts about life, God, work, play, kids, friends... It's pretty all-encompassing. At times, it helps to write what I am thinking through. In the writing comes organization and clarity, and then it's a lot easier to make sense of.
+
+So here's where I'll try to make sense of it all...  Just getting the blog software set up. It's Jekyll and I'll likely be using GitHub Pages (thanks GitHub!).
